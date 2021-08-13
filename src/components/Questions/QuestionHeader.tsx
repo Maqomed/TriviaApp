@@ -12,8 +12,6 @@ export const QuestionHeader: React.FC<HeaderProps> = ({ question }) => {
         </div>
 
     )
-
-
 }
 
 export default QuestionHeader

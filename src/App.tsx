@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './pages/Home';
 import QuizScreen from './pages/QuizScreen';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 function App() {
   return (

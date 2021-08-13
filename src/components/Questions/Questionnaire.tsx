@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchData } from '../../api/api'
+import { getQuestionsData } from '../../api/api'
 import { getAnswers } from '../../utils'
 import QuestionHeader from './QuestionHeader'
 import QuestionCategory from './QuestionCategory'
@@ -7,7 +7,6 @@ import Results from '../../pages/Results'
 import QuestionNumber from './QuestionNumber'
 import Loader from '../Loading/Loader'
 import Button from '../Buttons/Button'
-
 
 function Questionaire() {
 
@@ -20,8 +19,7 @@ function Questionaire() {
     const [correctAnswers, setCorrectAnswers] = useState<Array<string>>([])
 
     useEffect(() => {
-        const result = fetchData()
-        result.then(data => {
+        getQuestionsData().then(data => {
             setQuestions(data.results)
         }
         )
@@ -73,4 +71,5 @@ function Questionaire() {
             )
     )
 }
+
 export default Questionaire
