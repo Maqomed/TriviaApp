@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import MainButton from '../components/Buttons/MainButton'
+import Button from '../components/Buttons/Button'
 
 function Home() {
 
@@ -16,7 +16,7 @@ function Home() {
 
             </div>
             <Link to='/quiz' className='m-auto animate-bounce'>
-                <MainButton value="Begin" />
+                <Button type="main" value="Begin" />
             </Link>
         </div>
     )
