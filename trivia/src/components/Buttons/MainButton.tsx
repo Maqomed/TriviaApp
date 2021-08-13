@@ -11,4 +11,3 @@ export const BeginButton: React.FC<ButtonProps> = ({ value }) => {
 
 export default BeginButton
 
-{/* <button onClick={() => handleButtonClick(answer)} className='bg-white mt-10 text-purple-800 p-4 rounded-lg shadow-md w-24'>{answer}</button> */ }

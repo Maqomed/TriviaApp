@@ -1,7 +1,11 @@
+import Questionaire from '../components/Questions/Questionnaire'
+
 function QuizScreen() {
 
     return (
-        <div>Quiz Screen</div>
+        <div className='flex flex-col h-screen items-center'>
+            <Questionaire />
+        </div>
     )
 }
 
