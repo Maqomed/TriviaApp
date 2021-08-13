@@ -1,11 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import Home from './pages/Home';
+import QuizScreen from './pages/QuizScreen';
 import './App.css';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <div className="bg-red-900">Hello World</div>
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/quiz' component={QuizScreen} />
+          </Switch>
+        </div>
+      </Router>
 
     </div>
   );
