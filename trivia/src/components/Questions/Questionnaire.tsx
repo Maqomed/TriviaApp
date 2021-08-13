@@ -6,7 +6,7 @@ import QuestionCategory from './QuestionCategory'
 import Results from '../../pages/Results'
 import QuestionNumber from './QuestionNumber'
 import Loader from '../Loading/Loader'
-import AnswerButton from '../Buttons/AnswerButton'
+import Button from '../Buttons/Button'
 
 
 function Questionaire() {
@@ -29,9 +29,10 @@ function Questionaire() {
 
     if (questions.length > 0) {
         answers = getAnswers(questions, currentQuestion)
+
     }
 
-    const handleButtonClick = (answer: string) => {
+    const handleButtonClick = (answer?: string) => {
         if (answer === questions[currentQuestion].correct_answer) {
 
             const correctUserAnswers = correctAnswers.slice(0)
@@ -57,12 +58,12 @@ function Questionaire() {
             </div>
         ) :
             questions.length > 0 ? (
-                <div className='m-auto w-1/2'>
+                <div className='m-auto md:w-1/2 w-full'>
                     <QuestionCategory questions={questions} currentQuestion={currentQuestion} />
                     <QuestionHeader question={questions[currentQuestion].question} />
                     <div className='flex justify-between'>
                         {answers.map((answer, id) => (
-                            <AnswerButton handleButtonClick={handleButtonClick} answer={answer} key={id} />
+                            <Button value={answer} type="question" handleButtonClick={(id) => handleButtonClick(id)} id={answer} key={id} />
                         ))}
                     </div>
                     <QuestionNumber currentQuestionNumber={currentQuestionNumber} questions={questions} />
