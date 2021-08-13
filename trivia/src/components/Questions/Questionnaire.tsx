@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchData } from '../../api/api'
 import { getAnswers } from '../../utils'
-import Header from '../QuestionHeader/Header'
+import QuestionHeader from './QuestionHeader'
 import Category from './Category'
 import Results from '../../pages/Results'
 import QuestionNumber from './QuestionNumber'
@@ -58,7 +58,7 @@ function Questionaire() {
             questions.length > 0 ? (
                 <div className='m-auto w-1/2'>
                     <Category questions={questions} currentQuestion={currentQuestion} />
-                    <Header question={questions[currentQuestion].question} />
+                    <QuestionHeader question={questions[currentQuestion].question} />
                     <div className='flex justify-between'>
                         {answers.map((answer, id) => (
                             <button onClick={() => handleButtonClick(answer)} className='bg-white mt-10 text-purple-800 p-4 rounded-lg shadow-md w-24' key={id}>{answer}</button>

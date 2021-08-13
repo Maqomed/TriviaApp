@@ -4,7 +4,7 @@ interface HeaderProps {
     question: string
 }
 
-export const Header: React.FC<HeaderProps> = ({ question }) => {
+export const QuestionHeader: React.FC<HeaderProps> = ({ question }) => {
 
     return (
         <div className="flex justify-center bg-white text-purple-800 p-10 rounded-lg shadow-md">
@@ -16,4 +16,4 @@ export const Header: React.FC<HeaderProps> = ({ question }) => {
 
 }
 
-export default Header
+export default QuestionHeader
