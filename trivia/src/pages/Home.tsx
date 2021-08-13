@@ -15,7 +15,7 @@ function Home() {
             <div >
 
             </div>
-            <Link to='/quiz' className='m-auto'>
+            <Link to='/quiz' className='m-auto animate-bounce'>
                 <MainButton value="Begin" />
             </Link>
         </div>
