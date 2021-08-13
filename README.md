@@ -1,6 +1,9 @@
 # Project Name
 > TriviaApp
 
+# Demo site
+[trivigamequiz.netlify.app](https://trivigamequiz.netlify.app)
+
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
